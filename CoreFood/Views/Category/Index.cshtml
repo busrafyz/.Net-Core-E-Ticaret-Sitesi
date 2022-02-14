@@ -1,0 +1,32 @@
+﻿@model List<CoreFood.Data.Models.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/View/Shared/_Layout.cshtml";
+}
+
+<h2>Kategoriler</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Kategori</th>
+            <th scope="col">Güncelle</th>
+            <th scope="col">Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.CategoryId</td>
+                <td>@x.CategoryName</td>
+                <td><a href="#" class="btn btn-info">Güncelle</a></td>
+                <td><a href="#" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<a href="AddCategory" class="btn btn-success">Yeni Kategori</a>
+
