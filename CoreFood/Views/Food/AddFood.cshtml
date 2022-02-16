@@ -18,7 +18,7 @@
     @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
     <br />
     @Html.Label("Kategori")
-    @Html.DropDownListFor(x=>x.Category.CategoryId, (List<SelectListItem>)ViewBag.value, new { @class = "form-control" })
+    @Html.DropDownListFor(x=>x.CategoryId, (List<SelectListItem>)ViewBag.value, new { @class = "form-control" })
     <br />
     @Html.Label("Açıklama")
     @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
